@@ -20,7 +20,7 @@ Vue.use(Vuex)
 Vue.use(VueLazyloadComponent)
 Vue.use(VueCookies);
 Vue.use(VueGoogleMaps, {
-  load: {key: 'AIzaSyCQVq0r8ZEN8l91yGggs5GY5KD1xdbzprc' }
+  load: {key: GOOGLE_MAPS_KEY}
 });
 
 window.axios = axios

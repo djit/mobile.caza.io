@@ -64,7 +64,8 @@ export default {
       this.loading  = true
       var q = 'locale=ae&group=' + this.query.group  + '&transaction=' + this.query.transaction + '&location=' + this.query.location + '&type=' + this.query.type + '&bedrooms=' + this.query.bedrooms + '&pricemin=' + this.query.pricemin + '&pricemax=' + this.query.pricemax + '&size=' + this.query.size
       //axios.get('https://ae.caza.io/api/search?' + q)
-      axios.get('https://api.caza.io/api/search?' + q)
+      var url = API_ENDPOINT + 'search?' + q
+      axios.get(url)
       .then(response => {
         this.$store.commit('setProperties', response.data.properties)
         this.$store.commit('setToken', response.data.token)

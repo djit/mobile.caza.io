@@ -133,8 +133,8 @@ export default {
       var self = this
       this.loading = true
       var q = 'locale=ae&group=' + this.query.group + '&transaction=' + this.query.transaction + '&query=' + v.toLowerCase()
-      axios.get('https://api.caza.io/api/locations?' + q)
-      //axios.get('https://ae.caza.dev/api/locations?' + q)
+      var url = API_ENDPOINT + 'locations?' + q
+      axios.get(url)
       .then(response => {
         this.locationOptions = response.data.map(e => {
           return e.value

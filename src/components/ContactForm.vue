@@ -109,23 +109,8 @@ export default {
         var qs = 'name=' + this.name + '&phone=' + this.phone + '&email=' + this.email + '&text=' + this.text + '&property_id=' + this.property_id + '&cc=' + this.cc
         axios({
           method: 'POST',
-          //url: 'https://ae.caza.io/api/mailer/propertyenquiry',
-          url: 'https://api.caza.io/api/mailer/propertyenquiry/',
+          url: API_ENDPOINT,
           data: qs,
-          //headers: {
-          //  'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          //  'Accept': '*/*',
-          //  'X-CSRF-TOKEN': this.token
-          //}
-          /*
-          data: {
-            name: this.name,
-            phone: this.phone,
-            email: this.email,
-            text: this.text,
-            property_id: this.property_id,
-            cc: ''
-          },*/
         })
         .then(response => {
           //console.log(response)
