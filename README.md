@@ -1,6 +1,6 @@
-# caza
+# m.caza.io
 
-> Real EState Network
+> Vue.js mobile web client
 
 ## Build Setup
 
